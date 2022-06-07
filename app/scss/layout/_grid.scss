@@ -21,6 +21,16 @@
 
     &__main {
         background-color: hsl(240, 99%, 33%);
+
+        // rules order matters due to 'cascade' in the styles
+        
+        @include u.breakpoint(medium){
+            background-color: hsl(120, 100%, 14%);
+        }
+
+        @include u.breakpoint(large){
+            background-color: hsl(39, 100%, 30%);
+        }
     }
 
     &__sidebar {
